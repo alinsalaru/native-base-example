@@ -7,7 +7,7 @@ export const PLATFORM = {
   ANDROID: 'android',
   IOS: 'ios',
   MATERIAL: 'material',
-  WEB: 'web'
+  WEB: 'web',
 };
 
 const deviceHeight = Dimensions.get('window').height;

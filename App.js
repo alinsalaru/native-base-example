@@ -12,30 +12,23 @@ import {
   StyleSheet,
   ScrollView,
   View,
-  Text,
   StatusBar,
 } from 'react-native';
+import {Container, Content, Text, StyleProvider} from 'native-base';
+import getTheme from './native-base-theme/components';
+import material from './native-base-theme/variables/material';
 
 import Hello from './Hello';
 
 const App: () => React$Node = () => {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <View style={general.body}>
-          <View style={boxStyle.box}>
-            <Hello />
-          </View>
-          <View style={boxStyle2.box}>
-            <Hello />
-          </View>
-          <View style={boxStyle3.box}>
-            <Hello />
-          </View>
-        </View>
-      </SafeAreaView>
-    </>
+    <StyleProvider style={getTheme(material)}>
+      <Container>
+        <Content>
+          <Text>fff</Text>
+        </Content>
+      </Container>
+    </StyleProvider>
   );
 };
 
